@@ -1,0 +1,579 @@
+<!DOCTYPE html><html class="dark" lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Ranzz Stream</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "background": "#131316",
+          "error-container": "#93000a",
+          "surface-tint": "#ffb3ae",
+          "outline": "#ae8785",
+          "surface-bright": "#39393c",
+          "secondary-fixed": "#ffdad5",
+          "surface-container-low": "#1b1b1e",
+          "tertiary-fixed-dim": "#ffb952",
+          "surface-dim": "#131316",
+          "secondary-container": "#e10111",
+          "on-surface-variant": "#e8bcb9",
+          "on-secondary-fixed": "#410001",
+          "on-background": "#e5e1e6",
+          "on-secondary": "#690003",
+          "on-primary-fixed-variant": "#930016",
+          "surface-container-high": "#2a2a2d",
+          "on-primary-fixed": "#410005",
+          "tertiary": "#ffb952",
+          "primary-fixed-dim": "#ffb3ae",
+          "on-tertiary-fixed": "#291800",
+          "primary": "#ffb3ae",
+          "secondary-fixed-dim": "#ffb4aa",
+          "on-tertiary-fixed-variant": "#633f00",
+          "on-secondary-container": "#fff1ef",
+          "on-error": "#690005",
+          "surface-variant": "#353438",
+          "primary-container": "#ff5354",
+          "secondary": "#ffb4aa",
+          "on-tertiary-container": "#3c2500",
+          "surface": "#131316",
+          "surface-container-highest": "#353438",
+          "inverse-primary": "#c00020",
+          "on-error-container": "#ffdad6",
+          "on-surface": "#e5e1e6",
+          "on-secondary-fixed-variant": "#930007",
+          "on-tertiary": "#452b00",
+          "surface-container": "#1f1f22",
+          "primary-fixed": "#ffdad7",
+          "inverse-on-surface": "#303033",
+          "outline-variant": "#5e3f3d",
+          "surface-container-lowest": "#0e0e11",
+          "tertiary-fixed": "#ffddb4",
+          "tertiary-container": "#c68300",
+          "on-primary-container": "#5c000a",
+          "error": "#ffb4ab",
+          "on-primary": "#68000c"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-lg": "1.5rem",
+          "gutter": "1.25rem",
+          "space-xs": "0.25rem",
+          "margin-desktop": "3rem",
+          "space-xl": "2.5rem",
+          "space-sm": "0.5rem",
+          "margin-tablet": "2rem",
+          "margin": "1rem",
+          "space-md": "1rem",
+          "gutter-desktop": "1.5rem"
+        },
+        "fontFamily": {
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-xl-mobile": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "display-hero-mobile": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "display-hero": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "headline-xl": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "body-lg": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+          "headline-xl-mobile": ["1.5rem", {"lineHeight": "1.25", "fontWeight": "700"}],
+          "headline-md": ["1.25rem", {"lineHeight": "1.35", "fontWeight": "600"}],
+          "body-sm": ["0.75rem", {"lineHeight": "1.45", "fontWeight": "400"}],
+          "headline-lg": ["1.5rem", {"lineHeight": "1.3", "fontWeight": "700"}],
+          "display-hero-mobile": ["2rem", {"lineHeight": "1.2", "fontWeight": "800"}],
+          "body-md": ["0.875rem", {"lineHeight": "1.5", "fontWeight": "400"}],
+          "label-lg": ["0.875rem", {"lineHeight": "1", "fontWeight": "600"}],
+          "label-sm": ["0.6875rem", {"lineHeight": "1", "fontWeight": "700"}],
+          "label-md": ["0.75rem", {"lineHeight": "1", "fontWeight": "600"}],
+          "display-hero": ["3.5rem", {"lineHeight": "1.1", "fontWeight": "800"}],
+          "headline-sm": ["1.125rem", {"lineHeight": "1.4", "fontWeight": "600"}],
+          "headline-xl": ["2.25rem", {"lineHeight": "1.2", "fontWeight": "700"}]
+        }
+      }
+    }
+  };</script><style>@keyframes logoPulseGlow { 0%, 100% { filter: drop-shadow(0 0 4px rgba(255, 42, 58, 0.35)); } 50% { filter: drop-shadow(0 0 14px rgba(255, 42, 58, 0.85)) drop-shadow(0 0 26px rgba(255, 42, 58, 0.45)); } } .animate-logo-glow { animation: logoPulseGlow 3s ease-in-out infinite; } .animate-logo-glow:hover { filter: drop-shadow(0 0 16px rgba(255, 42, 58, 0.95)) drop-shadow(0 0 32px rgba(255, 42, 58, 0.6)) !important; } @media (prefers-reduced-motion: reduce) { .animate-logo-glow { animation: none; filter: drop-shadow(0 0 6px rgba(255, 42, 58, 0.4)); } }</style></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="h-16 w-full px-gutter-desktop max-w-[1440px] mx-auto flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-space-sm transition-all duration-300 hover:scale-105 animate-logo-glow" data-path="beranda" href="#" onmouseover="this.style.filter='drop-shadow(0 0 12px rgba(255, 42, 58, 0.75)) drop-shadow(0 0 24px rgba(255, 42, 58, 0.4))'" onmouseout="this.style.filter='none'"><img alt="Ranzz Stream" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V4CgBYYla3vD3SnhBmnBw0NyGY87Vvc8dxGPabaKdLAh9eUXyd-OEdp7fnYV4O7ygXbVWIBG_ydcu0wiTjq1aE1tA6xL-sAy6cQ1eqdQMyoUuEEsp2TPuYAdSApkfMtwDOZ4CzmN0xD18dxdLQBPwG0Nx5jxsHZi9fBkLAzkOIVYWovc-ixLPLoDu2x-Kcon0_U3BFwc1OeKpwCfDE4iPBeph2m6Z8VWgQ0DBLgxRF"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">Ranzz<span class="text-primary-container font-headline-sm">Stream</span></span></a><nav class="hidden lg:flex items-center gap-space-md ml-space-xs" data-active-classes="text-on-surface bg-surface-container-high font-bold px-space-sm py-space-xs rounded-lg"><a aria-current="page" class="transition-colors text-on-surface bg-surface-container-high font-bold px-space-sm py-space-xs rounded-lg transition-all duration-300 hover:scale-105 animate-logo-glow" data-path="beranda" href="#" onmouseover="this.style.filter='drop-shadow(0 0 12px rgba(255, 42, 58, 0.75)) drop-shadow(0 0 24px rgba(255, 42, 58, 0.4))'" onmouseout="this.style.filter='none'">Beranda</a><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors px-space-sm py-space-xs" data-path="drama" href="#">Drama</a><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors px-space-sm py-space-xs" data-path="film" href="#">Film</a><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors px-space-sm py-space-xs" data-path="anime" href="#">Anime</a><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors px-space-sm py-space-xs" data-path="katalog" href="#">Katalog</a></nav></div><div class="flex items-center gap-space-md flex-1 max-w-xl justify-end"><div class="relative w-full max-w-xs md:max-w-md hidden sm:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-base">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm font-body-sm pl-9 pr-space-md py-space-xs rounded-full outline-none focus:bg-surface-container transition-all" placeholder="Cari drama, film, anime..." type="text"></div><div class="flex items-center gap-space-sm flex-shrink-0"><button aria-label="Notifications" class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors rounded-full hover:bg-surface-container-high" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-secondary-container rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-xs pl-space-xs"><a class="flex items-center gap-space-xs p-0.5 rounded-full ring-1 ring-outline/30 hover:ring-primary-container transition-all" data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJe7HeXH0f3OQ83Xin-76_EBsqbSH5Z9MJtAUYKG-wjM1NFenn_OBYqhS7MyuaTXtDGJf6bkYB2pP8fb0XyX6NXkMEyhCDaU0E4I43zS1fp8oJYNp2jvJv9fl1Pjw3JgoYNv0_sQ8BUwZFmnKw7qf0J-pqQjhXbB9D8skHSDfwWrI58gIKzlFlbhzfsYWbgXOccm1ZvmKDMovdjjX-GK9Jf48lN2iKQjvlrUuLGmi-"><span class="material-symbols-outlined text-outline hidden md:block text-sm pr-1">keyboard_arrow_down</span></a></div></div></div></div></header><main class="w-full pt-16 bg-surface-container-lowest"><div class="flex flex-col w-full">
+<!-- Atmospheric Glow Effect -->
+<div class="relative w-full max-w-[1440px] mx-auto px-margin sm:px-gutter md:px-gutter-desktop pb-space-xl">
+<div class="absolute top-10 left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+<div class="absolute top-40 right-10 w-80 h-80 bg-secondary-container/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<!-- Top Navigation / Breadcrumb Navigation -->
+<div class="flex items-center justify-between py-space-sm mb-space-xs text-on-surface-variant font-label-md text-label-md">
+<a class="inline-flex items-center gap-space-xs hover:text-on-surface transition-colors group" href="#">
+<span class="material-symbols-outlined text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span class="font-label-lg text-label-lg">Kembali ke Katalog Drama</span>
+</a>
+<div class="flex items-center gap-space-md text-on-surface-variant">
+<span class="inline-flex items-center gap-1.5 bg-surface-container px-space-sm py-1 rounded-full text-label-sm font-label-sm text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+          Trending #1 Drama China
+        </span>
+<div class="hidden sm:flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-on-surface-variant text-label-sm font-label-sm">Server Indo-1 HD Cepat</span>
+</div>
+</div>
+</div>
+<!-- Cinematic 16:9 Video Player Container -->
+<div class="relative w-full aspect-video max-h-[720px] rounded-xl overflow-hidden bg-surface-container-lowest shadow-2xl group select-none">
+<!-- Player Video Background Poster / Screen Frame -->
+<img class="w-full h-full object-cover brightness-[0.85] transition-all duration-300 group-hover:brightness-[0.75]" data-alt="High contrast atmospheric cinematic wide still from Asian romance drama Hidden Love, featuring emotional close-up of a young woman in gentle golden hour city lights against dark backdrop, anamorphic lens flare, movie still color graded, 8k resolution, ultra detailed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVWtBg5kUcgyABCGNwt8rLahMGnpVfrBjwMmlF5oy3B8ZP11itK5Np4GrJHpF9kIg8lH7MVYpy_WYZHe2-Pt3u4v0aWnes-7_bzLC43V4TyUVawgRfyyE91vYuUTJWupQfRidJEE3xDr58SBFaQTv6iQdYMReen8m6lShEIuTzL19BrAs317E08COmNhMams-aDbIecJZ9beVdi54S7N5TbjZFRX1cVvhpzFqY-HmM">
+<!-- Top Overlay Controls -->
+<div class="absolute top-0 inset-x-0 p-space-md sm:p-space-lg flex items-center justify-between bg-gradient-to-b from-black/80 via-black/40 to-transparent opacity-90 transition-opacity">
+<div class="flex items-center gap-space-sm">
+<button aria-label="Go Back" class="w-10 h-10 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-all" type="button">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+</button>
+<div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-wide drop-shadow-md">Hidden Love</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant drop-shadow">Episode 2 • Rasa Manis yang Tak Terduga</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest/60 backdrop-blur-sm flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" title="Bagikan" type="button">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest/60 backdrop-blur-sm flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" title="Laporkan Masalah" type="button">
+<span class="material-symbols-outlined text-lg">flag</span>
+</button>
+</div>
+</div>
+<!-- Center Big Play Button (Hidden during pseudo-playback, reactive on hover) -->
+<button aria-label="Toggle Play" class="absolute inset-0 m-auto w-20 h-20 rounded-full bg-primary-container/90 hover:bg-primary-container text-white flex items-center justify-center shadow-[0_0_30px_rgba(255,83,84,0.45)] hover:scale-110 active:scale-95 transition-all duration-200" type="button">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<!-- Bottom Player Control Deck -->
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent p-space-md sm:p-space-lg flex flex-col gap-space-xs transition-opacity duration-300">
+<!-- Scrubber Progress Bar -->
+<div class="relative w-full h-1.5 hover:h-2.5 bg-white/20 hover:bg-white/30 rounded-full cursor-pointer transition-all flex items-center group/scrubber">
+<!-- Buffered progress -->
+<div class="absolute left-0 top-0 bottom-0 w-[55%] bg-white/30 rounded-full"></div>
+<!-- Played progress -->
+<div class="absolute left-0 top-0 bottom-0 w-[28%] bg-primary-container rounded-full shadow-[0_0_12px_rgba(255,83,84,0.8)]"></div>
+<!-- Scrubber Thumb -->
+<div class="absolute left-[28%] w-3.5 h-3.5 bg-on-surface rounded-full shadow-md scale-0 group-hover/scrubber:scale-100 transition-transform -translate-x-1/2 pointer-events-none ring-4 ring-primary-container/40"></div>
+</div>
+<!-- Controls Row -->
+<div class="flex items-center justify-between pt-space-xs text-on-surface">
+<!-- Left Controls (Playback & Time) -->
+<div class="flex items-center gap-space-sm md:gap-space-md">
+<button aria-label="Play/Pause" class="text-on-surface hover:text-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<button aria-label="Next Episode" class="text-on-surface hover:text-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-2xl">skip_next</span>
+</button>
+<div class="flex items-center gap-1.5 group/vol">
+<button aria-label="Mute Audio" class="text-on-surface hover:text-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-2xl">volume_up</span>
+</button>
+<div class="w-16 h-1 bg-white/30 rounded-full overflow-hidden hidden sm:block">
+<div class="w-3/4 h-full bg-on-surface"></div>
+</div>
+</div>
+<!-- Time Indicator -->
+<div class="text-label-md font-label-md text-on-surface font-mono tracking-tight">
+<span class="">12:43</span>
+<span class="text-outline-variant mx-1">/</span>
+<span class="text-on-surface-variant">45:30</span>
+</div>
+</div>
+<!-- Right Controls (Quality, Subtitle, Speed, PiP, Fullscreen) -->
+<div class="flex items-center gap-space-xs sm:gap-space-sm text-label-md font-label-md">
+<!-- Resolution Badge Dropdown -->
+<div class="relative">
+<button class="px-2 py-0.5 rounded bg-surface-container-high/80 hover:bg-surface-container-highest text-primary font-bold text-label-sm font-label-sm tracking-wider flex items-center gap-1 transition-colors" type="button">
+                1080p FHD
+              </button>
+</div>
+<!-- Subtitle CC -->
+<button aria-label="Subtitles" class="p-1 rounded text-primary-container hover:bg-white/10 transition-colors" title="Subtitle: Indonesia (CC)" type="button">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">closed_caption</span>
+</button>
+<!-- Playback Speed -->
+<button class="hidden sm:inline-flex px-1.5 py-0.5 rounded hover:bg-white/10 font-label-sm text-on-surface transition-colors" title="Kecepatan Putar" type="button">
+              1.0x
+            </button>
+<!-- Picture in Picture -->
+<button aria-label="Picture in Picture" class="p-1 rounded text-on-surface hover:bg-white/10 transition-colors" title="Picture in Picture" type="button">
+<span class="material-symbols-outlined text-xl">picture_in_picture_alt</span>
+</button>
+<!-- Fullscreen -->
+<button aria-label="Fullscreen" class="p-1 rounded text-on-surface hover:bg-white/10 transition-colors" title="Layar Penuh" type="button">
+<span class="material-symbols-outlined text-xl">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Grid (Side-by-side Desktop View matching reference) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop mt-space-lg">
+<!-- LEFT COLUMN: Metadata, Actions, Tabs, & Episode List (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col space-y-space-md">
+<!-- Header Info & Metadata -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wider">Drama</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wider">Romance</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">2023</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<strong class="text-on-surface">9.2</strong>
+<span class="text-on-surface-variant">(12.8k ulasan)</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary-fixed text-label-sm font-label-sm font-bold">TOP 10</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight mt-1">Hidden Love</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-3xl">
+            Sang Zhi jatuh cinta pada Duan Jiaxu, teman dekat kakak laki-lakinya yang sering bermain ke rumah mereka. Setelah sempat terpisah bertahun-tahun, takdir mempertemukan mereka kembali di kota kampus yang sama dengan dinamika hubungan yang kini berubah hangat.
+          </p>
+</div>
+<!-- Action CTAs (Matching reference layout) -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<!-- Primary CTA -->
+<button class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary-container text-on-secondary-container font-label-lg text-label-lg font-bold shadow-[0_4px_20px_rgba(255,83,84,0.35)] hover:bg-secondary-container transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span class="">Lanjutkan Menonton (Eps 2)</span>
+</button>
+<!-- Secondary CTA: Watchlist -->
+<button class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-xl">playlist_add</span>
+<span class="">Tambah ke Watchlist</span>
+</button>
+<!-- Download Action -->
+<button class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-xl">download</span>
+<span class="">Download Batch</span>
+</button>
+</div>
+<!-- Navigation Tabs: Episode (Active), Detail, Rekomendasi -->
+<div class="pt-space-sm">
+<div class="flex items-center gap-space-lg">
+<button class="relative pb-3 font-label-lg text-label-lg text-on-surface font-bold" type="button">
+              Episode (25)
+              <span class="absolute bottom-0 inset-x-0 h-0.5 bg-primary-container rounded-full"></span>
+</button>
+<button class="relative pb-3 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+              Sinopsis &amp; Detail
+            </button>
+<button class="relative pb-3 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+              Rekomendasi Terkait
+            </button>
+</div>
+</div>
+<!-- Episode Playlist Section -->
+<div class="flex flex-col space-y-space-sm pt-space-xs">
+<!-- Playlist Sub-header & Season Filter -->
+<div class="flex items-center justify-between">
+<div class="relative inline-block">
+<button class="inline-flex items-center gap-space-xs px-3.5 py-1.5 bg-surface-container rounded-lg text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="">Season 1 (Episode 1 - 25)</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">
+              Subtitle: <strong class="text-on-surface">Indonesia, English</strong>
+</div>
+</div>
+<!-- Episode Items List -->
+<div class="flex flex-col gap-space-xs">
+<!-- Episode 1 (Completed) -->
+<div class="group flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<!-- Thumbnail -->
+<div class="relative w-28 sm:w-36 aspect-video rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Cinematic still from drama episode 1 showing classroom scene with gentle soft lighting and youthful atmosphere, 4k" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCWzjSg3pX2fI93zwVsxSA4X0vrcqlQ4ZJh39tlxc9PokZdF2-QYaXuFtEuzChQ7oT3ylfMl5WhTItMI-w0uWqGQuvr2TWLjdk71Uu6afAakXLDoVji3xpMTIE7jXXyPtjQM1nYI1n37t8oK28JyJ_yrgiqYNHxi3wdZhtYipUFPTGR6PxgCFP7gMQbWj2DaPGtOjk3ljiPhWeIISvUBdVuyVAsXd2gafX5x7tizDl">
+<div class="absolute bottom-0 inset-x-0 h-1 bg-surface-container-highest">
+<div class="h-full bg-primary-container w-full"></div>
+</div>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all text-xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<!-- Episode Info -->
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="text-label-sm font-label-sm px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">S1 : E1</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate group-hover:text-primary transition-colors">Episode 1 : Pertemuan Pertama</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Sang Zhi yang masih duduk di bangku sekolah sering kali menghadapi masalah dan bertemu sahabat kakaknya.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md ml-space-sm flex-shrink-0 text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-mono hidden sm:inline">45:30</span>
+<button aria-label="Download Episode 1" class="p-2 rounded-full hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">download_for_offline</span>
+</button>
+</div>
+</div>
+<!-- Episode 2 (CURRENTLY PLAYING - Highlighted Active Card) -->
+<div class="relative group flex items-center justify-between p-space-sm rounded-xl bg-surface-container-high shadow-lg transition-all cursor-pointer">
+<!-- Active Indicator Bar -->
+<div class="absolute left-0 top-2 bottom-2 w-1.5 bg-primary-container rounded-r-full"></div>
+<div class="flex items-center gap-space-md min-w-0 pl-1.5">
+<!-- Thumbnail with Playing wave badge -->
+<div class="relative w-28 sm:w-36 aspect-video rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover brightness-90 group-hover:scale-105 transition-transform duration-300" data-alt="Cinematic still from drama episode 2 showing female protagonist talking under warm street light at night with subtle emotional framing, 4k" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtzAXsJoL6I44-jjbs4PDL4IeA-V3A06_M2ki4KQEqVWZ3sBvc-9SmOlCQjMKtaJR2297Z8BcFcKd5VkaZQ2nVXNBqfoRw_DMNYr4tuPDiyDVePE5rA4I5rA5g6VLyPuOQB3wuDffpUNdeJJznUMQ1fOGNNpoG8IygsZSgRKa8OM8l26NvOccgWQwcwdHnMgKVa07KDdz_C0dgYrdbFRb1h01Fs2J5uWwR8t9ItCwF">
+<div class="absolute bottom-0 inset-x-0 h-1 bg-surface-container-lowest">
+<div class="h-full bg-primary-container w-[28%]"></div>
+</div>
+<div class="absolute inset-0 bg-secondary-container/20 flex items-center justify-center">
+<div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white text-base" style="font-variation-settings: 'FILL' 1;">graphic_eq</span>
+</div>
+</div>
+</div>
+<!-- Episode Info -->
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="text-label-sm font-label-sm px-1.5 py-0.5 rounded bg-primary-container text-white font-bold">Sedang Diputar</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold truncate">Episode 2 : Rasa Manis yang Tak Terduga</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Duan Jiaxu membantu menyelesaikan tugas wali kelas Sang Zhi, perlahan membuat rasa kagum berubah.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md ml-space-sm flex-shrink-0">
+<span class="font-label-sm text-label-sm font-mono text-primary font-semibold hidden sm:inline">46:20</span>
+<button aria-label="Downloaded" class="p-2 rounded-full text-primary-container bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+</div>
+</div>
+<!-- Episode 3 -->
+<div class="group flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative w-28 sm:w-36 aspect-video rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Cinematic still from drama episode 3 showing male lead offering a warm drink in a cozy dessert cafe setting, film look, high definition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdYjxUIvvUpffWGySmeA9k-lo5XKiHpY20EZHhz0dL1LZv8rmlCjLHVMMgrZfqGjBA5n4OqPzBjBFpjtPl9COrK7MXX8HbQfA4HoR2od2i0vOsDU85phRX6Tfy3Jn80OYhECkqyNeszU8E9ZFytTlMqiEHRRxAVXxkTpQveJC7fjNjyKrO9JtOnZmanqJZKoOBOinZ2AUZ3AX9Gg9aH0e9xG1O4dC4mWgIwkrpmTRT">
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all text-xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="text-label-sm font-label-sm px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">S1 : E3</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate group-hover:text-primary transition-colors">Episode 3 : Janji Masa Depan</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Sebuah janji kecil terucap sebelum kepindahan Jiaxu yang meninggalkan kesan abadi bagi Sang Zhi.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md ml-space-sm flex-shrink-0 text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-mono hidden sm:inline">46:17</span>
+<button aria-label="Download Episode 3" class="p-2 rounded-full hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+</div>
+<!-- Episode 4 -->
+<div class="group flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative w-28 sm:w-36 aspect-video rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Cinematic still from drama episode 4 featuring a university library aisle with soft book ambient lighting, thoughtful expression, 4k" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYShQPt4sMZGm7nqBMPk1HVf3C2XjM7OkDvxpuaOHqno1DD-hLDIiCE-0kheEkNYRrR0f1UnCghVxRZmabzjVVnr9uuRg5_v_5aLSuznNZCPHYnLIYrVFmgyvvc2go2RCH-_ISb07vFD5-R11YZMN7-zFRhLIPoi7X521bzxSARv8mm1q1dsxaFlpo_NEbzzGvXZi2dq6Zle1YKTxCpv6TWf3J8Ub7FKesZyq7wHfS">
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all text-xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="text-label-sm font-label-sm px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">S1 : E4</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate group-hover:text-primary transition-colors">Episode 4 : Kampus yang Jauh</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Sang Zhi bertekad keras untuk masuk ke universitas yang sama di kota tempat Jiaxu bekerja.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md ml-space-sm flex-shrink-0 text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-mono hidden sm:inline">44:50</span>
+<button aria-label="Download Episode 4" class="p-2 rounded-full hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+</div>
+<!-- Episode 5 -->
+<div class="group flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative w-28 sm:w-36 aspect-video rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Cinematic still from drama episode 5 showing rainy night bus stop romance scene with clear umbrella and reflective street asphalt, 4k" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_cJkfJdmRZ-MmuiRkMiCBU0ZDXqWfgVraLC4PAaR_hM5goC5QiEwLb7Ji0E3rdib5g5hjVOEmJCVdldSAi6S-SHhsBfAMy6i7rr4zoY33oo3z0ixoRA65VrJz3bTUegOCp1UFLyxHCRz9J3w2k-SuvwedyWwEntdBThVLvYe80E4-DatrDqNJkHFPhygWlsdp46neZi8PdJ8_PrLUXRXFJZmub53tCF43L2r_Zl6M">
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all text-xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="text-label-sm font-label-sm px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">S1 : E5</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate group-hover:text-primary transition-colors">Episode 5 : Hujan di Kota Asing</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Kunjungan mendadak berujung salah paham ketika Sang Zhi melihat wanita lain di sisi Jiaxu.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md ml-space-sm flex-shrink-0 text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-mono hidden sm:inline">47:12</span>
+<button aria-label="Download Episode 5" class="p-2 rounded-full hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Load More Episodes Button -->
+<button class="w-full py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs mt-space-xs" type="button">
+<span class="">Tampilkan Semua Episode (25)</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sidebar Cards (Info Lainnya + Pemeran / Cast) (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col space-y-space-md">
+<!-- Info Lainnya Card -->
+<div class="relative bg-surface-container-low rounded-xl p-space-md shadow-md overflow-hidden">
+<!-- Subtle Aesthetic Doodle Crown Accent in Top Right corner matching reference style -->
+<div class="absolute -top-1 -right-1 text-primary-container/20 pointer-events-none select-none">
+<svg class="w-24 h-24 rotate-12" fill="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 65L30 30L50 55L75 25L85 65H15Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+<circle cx="30" cy="25" fill="currentColor" r="4"></circle>
+<circle cx="50" cy="50" fill="currentColor" r="4"></circle>
+<circle cx="75" cy="20" fill="currentColor" r="4"></circle>
+</svg>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight mb-space-sm flex items-center justify-between">
+<span class="">Info Lainnya</span>
+<span class="material-symbols-outlined text-primary-container text-lg">info</span>
+</h3>
+<div class="space-y-space-xs font-body-sm text-body-sm">
+<div class="flex items-start justify-between py-1.5 border-b border-surface-container/40">
+<span class="text-on-surface-variant font-medium">Judul Asli</span>
+<span class="text-on-surface font-semibold text-right">偷偷藏不住 (Hidden Love)</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-surface-container/40">
+<span class="text-on-surface-variant font-medium">Tipe</span>
+<span class="text-on-surface font-semibold">Drama China</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-surface-container/40">
+<span class="text-on-surface-variant font-medium">Tahun Rilis</span>
+<span class="text-on-surface font-semibold">2023</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-surface-container/40">
+<span class="text-on-surface-variant font-medium">Durasi Rata-rata</span>
+<span class="text-on-surface font-semibold">45 menit / episode</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-surface-container/40">
+<span class="text-on-surface-variant font-medium">Total Episode</span>
+<span class="text-on-surface font-semibold">25 Episode (Tamat)</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-surface-container/40">
+<span class="text-on-surface-variant font-medium">Subtitle</span>
+<span class="text-on-surface font-semibold">Indonesia, English, Malay</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-surface-container/40">
+<span class="text-on-surface-variant font-medium">Rating Usia</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-mono text-label-sm font-label-sm">13+</span>
+</div>
+<div class="flex items-center justify-between py-1.5">
+<span class="text-on-surface-variant font-medium">Skor Komunitas</span>
+<span class="flex items-center gap-1 text-tertiary font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                9.2 / 10
+              </span>
+</div>
+</div>
+</div>
+<!-- Pemeran (Cast Members) Grid -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Pemeran Utama</h3>
+<a class="text-label-sm font-label-sm text-primary hover:underline" href="#">Semua Kru &gt;</a>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Cast 1: Zhao Lusi (Zhou Luwei) -->
+<div class="group flex flex-col items-center text-center p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="relative w-16 h-16 rounded-full overflow-hidden mb-2 shadow-inner ring-2 ring-primary-container/20 group-hover:ring-primary-container transition-all">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="Close up portrait photograph of young Asian actress Zhao Lusi smiling warmly with subtle studio soft lighting, high fashion quality" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZhJvJO0o7e5oLSFC0Vo0qEcTGbx7flFAp00kgVqP0kDq4qbj4bJS5eRCqDtGo4EaYM9n6iMqwiR3mrztsL2scXA230hz1-MAgkkumSobr2Fgr8pcUua4ob78P1lHO7Y210lVS8Wh0mjQ01C854p_qiekHQumOEwAKRzF98p7M4ri-IbntiAPkYAgwArDaU6PZTDsQJG0GQLmaLSXTqKeW5YyqW-IH7FTOIE5QeXF3">
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold truncate w-full">Zhou Luwei</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate w-full">Sang Zhi (Pemeran Utama)</p>
+</div>
+<!-- Cast 2: Chen Zheyuan -->
+<div class="group flex flex-col items-center text-center p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="relative w-16 h-16 rounded-full overflow-hidden mb-2 shadow-inner ring-2 ring-primary-container/20 group-hover:ring-primary-container transition-all">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="Close up cinematic portrait photo of handsome young Asian actor Chen Zheyuan with dark hair, studio lighting, highly detailed face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqmd84gX_9HmZ7rSs2JaIZHm3kRBL0HA0Y2kowxLxet5uD1_9fsfn7Z_WYoKKSARqE8er5vXjazNeE0MXVk75_9Cb8VYx4wr9HhDlqL4PngFFpi-qqK5b-Th035OlNb2aZMMHB5RlvO9-07-_dgPCbtcpvOmXbr3HFJhEfX_NPSEHf95uEqjym7HJre4E_GN__14p-6MIO5SdG2gFOTZX9g8eNVEGqwggbjKExFlF9">
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold truncate w-full">Chen Zheyuan</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate w-full">Duan Jiaxu (Pemeran Utama)</p>
+</div>
+<!-- Cast 3: Victor Ma -->
+<div class="group flex flex-col items-center text-center p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="relative w-16 h-16 rounded-full overflow-hidden mb-2 shadow-inner ring-2 ring-primary-container/20 group-hover:ring-primary-container transition-all">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="Portrait photograph of young Asian male actor Victor Ma Boqian with friendly expression and modern stylish haircut" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUFaI21m2c_9kMIuIDeHRaxCJeHiDMoa3Q_3Cp1Jh-BVqN1punFdEtthkpfd7EhlOgNaR-4YjLGuD5b5vlTN9INDL676TymuqNjUEtfmVNe00bL6HpW4b7l26W3XRu4zvRg2zL88b4Y2S14FTFi0V5xXPF7nZp3kkk4LWkzgVUo3ThabmVblO_T2dCXrjHbC6JQLKiXa64YBLZUd_yVpAdcqh8lhzgqbiH-idLYgJq">
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold truncate w-full">Victor Ma</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate w-full">Sang Yan (Kakak Sang Zhi)</p>
+</div>
+<!-- Cast 4: Zeng Li -->
+<div class="group flex flex-col items-center text-center p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="relative w-16 h-16 rounded-full overflow-hidden mb-2 shadow-inner ring-2 ring-primary-container/20 group-hover:ring-primary-container transition-all">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="Portrait photo of elegant Asian actress Zeng Li with poised maternal gentle smile, high key studio portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN7Y55m_iNpBUXfowp2pvVmQP5QbZqQ42x_hIIHg9nWCx9QaGnzKP7SlgOeQOucJNRcA6QzfuTSglHqVaPDF8lcI9QWiYD4SJgRvOe9P-MW4iN_V2Wqz8V0ys5AdktHF7CVF7A7RaNU3cfUTqKrPKG7QjM2sx7xmUl2H5eBpX45bHvMe5GLwkeodncNLZa007t3BdNVIYJqBMSVhx4rAT9xUa9v484Mq6zf5LXgImG">
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold truncate w-full">Zeng Li</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate w-full">Li Ping (Ibu Sang Zhi)</p>
+</div>
+</div>
+</div>
+<!-- Serial Terkait / Rekomendasi Mini Banner -->
+<div class="bg-gradient-to-br from-surface-container to-surface-container-high rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold">Rekomendasi Serupa</span>
+</div>
+<div class="flex gap-space-sm items-center p-2 rounded-lg bg-surface-container-lowest/60 hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<div class="w-14 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Vertical poster thumbnail of Korean romance drama The Glory featuring moody dark cinematic keyart with atmospheric tension" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6odnwHnq7G-6oR3ZsdkI9QPnserRCnTQVSLhs_1S1wMwrYPGYIqpp9YvM9Bfk0jhSWnaMvy04U7cbdasqhTD6hEvRQyoCkS0maj_RaoJT44aF84lxgYkvdqIQSm5xRPRFmNbT0XtF4nCQmovewNbj_hvsLkU4QkdZriC826E_e8VUiWQxOCGYeRBS0QUCIOmOBP8SER0YpXRoCB2s3vKxHMcqiT_CyjqErdO2H8JR">
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold truncate group-hover:text-primary transition-colors">The Glory</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Drama • 16 eps</p>
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="">9.1</span>
+</div>
+</div>
+</div>
+<div class="flex gap-space-sm items-center p-2 rounded-lg bg-surface-container-lowest/60 hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<div class="w-14 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Vertical poster thumbnail of Asian fantasy romance drama Love Like the Galaxy with elaborate historic costumes and majestic cinematic backlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1nNUPEHIRLZ66IuCQoxoC0qmGDGe24TFZl8SvbpSnGfl2XQbO4VgI0ea7Ut4V5iXewbjlqiOrWFNiXTwWLilmjc10WJNAYXv97a10Vsgiq5vlGmTMpgCfVmU16_unnyZXWi1qfhSkvQvJ7p4ERMMIBOe63RrYj07KmquG_C6y12TkyuHlmtwA7di9zb-fbyzhoZ5JagF0BCqESgpByHJ3s3ivja5ac-iBQ8HZx_eT">
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold truncate group-hover:text-primary transition-colors">Love Like the Galaxy</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Drama • 27 eps</p>
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="">9.3</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Watch Party & Live Reaction Floating Toast (Micro-interaction) -->
+<div class="fixed bottom-6 right-6 hidden md:flex items-center gap-space-sm bg-surface-container-high/90 backdrop-blur-md px-4 py-2.5 rounded-full shadow-2xl z-40">
+<div class="relative flex -space-x-2 overflow-hidden">
+<span class="inline-block h-7 w-7 rounded-full ring-2 ring-surface-container-high bg-primary-container text-white flex items-center justify-center font-bold text-xs">8.9k</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">orang sedang menonton episode ini</span>
+<button class="ml-1 text-primary-container hover:text-white transition-colors" title="Komentar Langsung" type="button">
+<span class="material-symbols-outlined text-xl">forum</span>
+</button>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl"><div class="w-full max-w-[1440px] mx-auto px-gutter-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-space-lg mb-space-xl"><div class="lg:col-span-2 space-y-space-sm"><div class="flex items-center gap-space-sm"><img alt="Ranzz Stream" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V4CgBYYla3vD3SnhBmnBw0NyGY87Vvc8dxGPabaKdLAh9eUXyd-OEdp7fnYV4O7ygXbVWIBG_ydcu0wiTjq1aE1tA6xL-sAy6cQ1eqdQMyoUuEEsp2TPuYAdSApkfMtwDOZ4CzmN0xD18dxdLQBPwG0Nx5jxsHZi9fBkLAzkOIVYWovc-ixLPLoDu2x-Kcon0_U3BFwc1OeKpwCfDE4iPBeph2m6Z8VWgQ0DBLgxRF"><span class="font-headline-sm text-headline-sm text-on-surface uppercase">Ranzz<span class="text-primary-container">Stream</span></span></div><p class="text-on-surface-variant text-body-sm font-body-sm max-w-sm">Platform streaming film, serial drama Asia premium, dan anime terlengkap dengan kualitas visual sinematik terbaik.</p><div class="flex items-center gap-space-sm pt-space-xs"><a aria-label="Explore" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-lg">public</span></a><a aria-label="Community" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-lg">forum</span></a><a aria-label="Broadcast" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-lg">podcasts</span></a></div></div><div class="space-y-space-xs"><p class="text-on-surface font-label-lg text-label-lg uppercase tracking-wider">Kategori</p><ul class="space-y-space-xs text-body-sm font-body-sm"><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="drama" href="#">Drama Asia</a></li><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="film" href="#">Film Layar Lebar</a></li><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="anime" href="#">Anime Series</a></li><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="katalog" href="#">Original Ranzz</a></li></ul></div><div class="space-y-space-xs"><p class="text-on-surface font-label-lg text-label-lg uppercase tracking-wider">Bantuan</p><ul class="space-y-space-xs text-body-sm font-body-sm"><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Pusat Bantuan</a></li><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Syarat &amp; Ketentuan</a></li><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Kebijakan Privasi</a></li><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Status Layanan</a></li></ul></div><div class="space-y-space-xs"><p class="text-on-surface font-label-lg text-label-lg uppercase tracking-wider">Unduh Aplikasi</p><p class="text-on-surface-variant text-body-sm font-body-sm">Tersedia di TV pintar, tablet, dan smartphone Android &amp; iOS.</p><div class="flex flex-col gap-space-xs pt-space-xs"><div class="bg-surface-container px-space-sm py-space-xs rounded-lg flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-lg">tv</span><span class="font-label-md text-label-md text-on-surface">Smart TV App</span></div><div class="bg-surface-container px-space-sm py-space-xs rounded-lg flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-lg">smartphone</span><span class="font-label-md text-label-md text-on-surface">Mobile App</span></div></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm text-body-sm font-body-sm text-on-surface-variant/80"><p class="">© 2025 Ranzz Stream. Seluruh hak cipta dilindungi undang-undang.</p><div class="flex gap-space-md"><a class="hover:text-on-surface transition-colors" href="#">Privasi</a><a class="hover:text-on-surface transition-colors" href="#">Ketentuan</a><a class="hover:text-on-surface transition-colors" href="#">Preferensi Cookie</a></div></div></div></footer>
+
+
+
+
+
+</body></html>

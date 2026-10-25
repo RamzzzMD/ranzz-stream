@@ -1,0 +1,547 @@
+<!DOCTYPE html><html class="dark" lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Ranzz Stream</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "background": "#131316",
+          "error-container": "#93000a",
+          "surface-tint": "#ffb3ae",
+          "outline": "#ae8785",
+          "surface-bright": "#39393c",
+          "secondary-fixed": "#ffdad5",
+          "surface-container-low": "#1b1b1e",
+          "tertiary-fixed-dim": "#ffb952",
+          "surface-dim": "#131316",
+          "secondary-container": "#e10111",
+          "on-surface-variant": "#e8bcb9",
+          "on-secondary-fixed": "#410001",
+          "on-background": "#e5e1e6",
+          "on-secondary": "#690003",
+          "on-primary-fixed-variant": "#930016",
+          "surface-container-high": "#2a2a2d",
+          "on-primary-fixed": "#410005",
+          "tertiary": "#ffb952",
+          "primary-fixed-dim": "#ffb3ae",
+          "on-tertiary-fixed": "#291800",
+          "primary": "#ffb3ae",
+          "secondary-fixed-dim": "#ffb4aa",
+          "on-tertiary-fixed-variant": "#633f00",
+          "on-secondary-container": "#fff1ef",
+          "on-error": "#690005",
+          "surface-variant": "#353438",
+          "primary-container": "#ff5354",
+          "secondary": "#ffb4aa",
+          "on-tertiary-container": "#3c2500",
+          "surface": "#131316",
+          "surface-container-highest": "#353438",
+          "inverse-primary": "#c00020",
+          "on-error-container": "#ffdad6",
+          "on-surface": "#e5e1e6",
+          "on-secondary-fixed-variant": "#930007",
+          "on-tertiary": "#452b00",
+          "surface-container": "#1f1f22",
+          "primary-fixed": "#ffdad7",
+          "inverse-on-surface": "#303033",
+          "outline-variant": "#5e3f3d",
+          "surface-container-lowest": "#0e0e11",
+          "tertiary-fixed": "#ffddb4",
+          "tertiary-container": "#c68300",
+          "on-primary-container": "#5c000a",
+          "error": "#ffb4ab",
+          "on-primary": "#68000c"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-lg": "1.5rem",
+          "gutter": "1.25rem",
+          "space-xs": "0.25rem",
+          "margin-desktop": "3rem",
+          "space-xl": "2.5rem",
+          "space-sm": "0.5rem",
+          "margin-tablet": "2rem",
+          "margin": "1rem",
+          "space-md": "1rem",
+          "gutter-desktop": "1.5rem"
+        },
+        "fontFamily": {
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-xl-mobile": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "display-hero-mobile": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "display-hero": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "headline-xl": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "body-lg": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+          "headline-xl-mobile": ["1.5rem", {"lineHeight": "1.25", "fontWeight": "700"}],
+          "headline-md": ["1.25rem", {"lineHeight": "1.35", "fontWeight": "600"}],
+          "body-sm": ["0.75rem", {"lineHeight": "1.45", "fontWeight": "400"}],
+          "headline-lg": ["1.5rem", {"lineHeight": "1.3", "fontWeight": "700"}],
+          "display-hero-mobile": ["2rem", {"lineHeight": "1.2", "fontWeight": "800"}],
+          "body-md": ["0.875rem", {"lineHeight": "1.5", "fontWeight": "400"}],
+          "label-lg": ["0.875rem", {"lineHeight": "1", "fontWeight": "600"}],
+          "label-sm": ["0.6875rem", {"lineHeight": "1", "fontWeight": "700"}],
+          "label-md": ["0.75rem", {"lineHeight": "1", "fontWeight": "600"}],
+          "display-hero": ["3.5rem", {"lineHeight": "1.1", "fontWeight": "800"}],
+          "headline-sm": ["1.125rem", {"lineHeight": "1.4", "fontWeight": "600"}],
+          "headline-xl": ["2.25rem", {"lineHeight": "1.2", "fontWeight": "700"}]
+        }
+      }
+    }
+  };</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="h-16 w-full px-gutter-desktop max-w-[1440px] mx-auto flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-space-sm group/logo cursor-pointer transition-all duration-300 hover:scale-105 logo-pulse-glow" data-path="beranda" href="#" style="transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);" onmouseenter="this.style.filter='drop-shadow(0 0 12px rgba(255, 42, 58, 0.75)) drop-shadow(0 0 24px rgba(255, 42, 58, 0.4))'; this.style.transform='scale(1.04)';" onmouseleave="this.style.filter=''; this.style.transform='none';"><img alt="Ranzz Stream" class="h-9 w-auto object-contain rounded-md transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1V4CgBYYla3vD3SnhBmnBw0NyGY87Vvc8dxGPabaKdLAh9eUXyd-OEdp7fnYV4O7ygXbVWIBG_ydcu0wiTjq1aE1tA6xL-sAy6cQ1eqdQMyoUuEEsp2TPuYAdSApkfMtwDOZ4CzmN0xD18dxdLQBPwG0Nx5jxsHZi9fBkLAzkOIVYWovc-ixLPLoDu2x-Kcon0_U3BFwc1OeKpwCfDE4iPBeph2m6Z8VWgQ0DBLgxRF"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">Ranzz<span class="text-primary-container font-headline-sm">Stream</span></span></a><nav class="hidden lg:flex items-center gap-space-md ml-space-xs" data-active-classes="text-on-surface bg-surface-container-high font-bold px-space-sm py-space-xs rounded-lg"><a class="flex items-center gap-space-sm group/logo cursor-pointer transition-all duration-300 hover:scale-105 logo-pulse-glow" data-path="beranda" href="#" style="transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);" onmouseenter="this.style.filter='drop-shadow(0 0 12px rgba(255, 42, 58, 0.75)) drop-shadow(0 0 24px rgba(255, 42, 58, 0.4))'; this.style.transform='scale(1.04)';" onmouseleave="this.style.filter=''; this.style.transform='none';"><img alt="Ranzz Stream" class="h-9 w-auto object-contain rounded-md transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1V4CgBYYla3vD3SnhBmnBw0NyGY87Vvc8dxGPabaKdLAh9eUXyd-OEdp7fnYV4O7ygXbVWIBG_ydcu0wiTjq1aE1tA6xL-sAy6cQ1eqdQMyoUuEEsp2TPuYAdSApkfMtwDOZ4CzmN0xD18dxdLQBPwG0Nx5jxsHZi9fBkLAzkOIVYWovc-ixLPLoDu2x-Kcon0_U3BFwc1OeKpwCfDE4iPBeph2m6Z8VWgQ0DBLgxRF"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">Ranzz<span class="text-primary-container font-headline-sm">Stream</span></span></a><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors px-space-sm py-space-xs" data-path="drama" href="#">Drama</a><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors px-space-sm py-space-xs" data-path="film" href="#">Film</a><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors px-space-sm py-space-xs" data-path="anime" href="#">Anime</a><a aria-current="page" class="transition-colors text-on-surface bg-surface-container-high font-bold px-space-sm py-space-xs rounded-lg" data-path="katalog" href="#">Katalog</a></nav></div><div class="flex items-center gap-space-md flex-1 max-w-xl justify-end"><div class="relative w-full max-w-xs md:max-w-md hidden sm:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-base">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm font-body-sm pl-9 pr-space-md py-space-xs rounded-full outline-none focus:bg-surface-container transition-all" placeholder="Cari drama, film, anime..." type="text"></div><div class="flex items-center gap-space-sm flex-shrink-0"><button aria-label="Notifications" class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors rounded-full hover:bg-surface-container-high" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-secondary-container rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-xs pl-space-xs"><a class="flex items-center gap-space-xs p-0.5 rounded-full ring-1 ring-outline/30 hover:ring-primary-container transition-all" data-path="profile" href="#"><img alt="Ranzz Stream" class="h-9 w-auto object-contain rounded-md" src="https://lh3.googleusercontent.com/aida/AEtjO1V4CgBYYla3vD3SnhBmnBw0NyGY87Vvc8dxGPabaKdLAh9eUXyd-OEdp7fnYV4O7ygXbVWIBG_ydcu0wiTjq1aE1tA6xL-sAy6cQ1eqdQMyoUuEEsp2TPuYAdSApkfMtwDOZ4CzmN0xD18dxdLQBPwG0Nx5jxsHZi9fBkLAzkOIVYWovc-ixLPLoDu2x-Kcon0_U3BFwc1OeKpwCfDE4iPBeph2m6Z8VWgQ0DBLgxRF"><span class="material-symbols-outlined text-outline hidden md:block text-sm pr-1">keyboard_arrow_down</span></a></div></div></div></div></header><main class="w-full pt-16 bg-surface-container-lowest"><div class="flex flex-col w-full">
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 right-12 w-96 h-96 bg-secondary-container/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-80 left-0 w-80 h-80 bg-primary-container/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto px-gutter-desktop py-space-md">
+<div class="flex flex-col lg:flex-row gap-space-lg items-start">
+<!-- Left Sidebar Navigation -->
+<aside class="w-full lg:w-60 flex-shrink-0 bg-surface-container-low/70 rounded-xl p-space-sm backdrop-blur-md">
+<div class="px-space-sm py-space-xs mb-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Kategori Utama</span>
+<span class="material-symbols-outlined text-outline text-base">tune</span>
+</div>
+<nav class="flex flex-row lg:flex-col gap-1 overflow-x-auto lg:overflow-visible pb-1 lg:pb-0 scrollbar-none" id="sidebar-filter-nav">
+<button class="group flex items-center gap-space-sm w-full px-space-sm py-2.5 rounded-lg text-left transition-all bg-secondary-container text-on-secondary-container font-label-lg text-label-lg shadow-[0_4px_16px_rgba(225,1,17,0.3)]" type="button">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+<span class="whitespace-nowrap">Semua</span>
+<span class="ml-auto font-label-sm text-label-sm bg-surface-container-lowest/40 px-1.5 py-0.5 rounded text-white hidden lg:inline-block">1.4k</span>
+</button>
+<button class="group flex items-center gap-space-sm w-full px-space-sm py-2.5 rounded-lg text-left transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-lg text-label-lg" type="button">
+<span class="material-symbols-outlined text-lg text-outline group-hover:text-primary-container transition-colors">theaters</span>
+<span class="whitespace-nowrap">Drama China</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline hidden lg:inline-block">320</span>
+</button>
+<button class="group flex items-center gap-space-sm w-full px-space-sm py-2.5 rounded-lg text-left transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-lg text-label-lg" type="button">
+<span class="material-symbols-outlined text-lg text-outline group-hover:text-primary-container transition-colors">live_tv</span>
+<span class="whitespace-nowrap">Drama Korea</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline hidden lg:inline-block">415</span>
+</button>
+<button class="group flex items-center gap-space-sm w-full px-space-sm py-2.5 rounded-lg text-left transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-lg text-label-lg" type="button">
+<span class="material-symbols-outlined text-lg text-outline group-hover:text-primary-container transition-colors">movie</span>
+<span class="whitespace-nowrap">Film</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline hidden lg:inline-block">290</span>
+</button>
+<button class="group flex items-center gap-space-sm w-full px-space-sm py-2.5 rounded-lg text-left transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-lg text-label-lg" type="button">
+<span class="material-symbols-outlined text-lg text-outline group-hover:text-primary-container transition-colors">animation</span>
+<span class="whitespace-nowrap">Anime</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline hidden lg:inline-block">380</span>
+</button>
+<button class="group flex items-center gap-space-sm w-full px-space-sm py-2.5 rounded-lg text-left transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-lg text-label-lg" type="button">
+<span class="material-symbols-outlined text-lg text-outline group-hover:text-primary-container transition-colors">celebration</span>
+<span class="whitespace-nowrap">Variety</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline hidden lg:inline-block">84</span>
+</button>
+<div class="h-px bg-surface-container-high my-space-xs hidden lg:block"></div>
+<button class="group flex items-center gap-space-sm w-full px-space-sm py-2.5 rounded-lg text-left transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-lg text-label-lg" type="button">
+<span class="material-symbols-outlined text-lg text-outline group-hover:text-tertiary transition-colors">favorite</span>
+<span class="whitespace-nowrap">Favorit</span>
+<span class="ml-auto font-label-sm text-label-sm text-tertiary hidden lg:inline-block">24</span>
+</button>
+</nav>
+<!-- Sidebar Quick Banner Stats -->
+<div class="hidden lg:block mt-space-md p-space-sm bg-surface-container rounded-xl">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-secondary-container text-base">bolt</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Rilis Harian</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs">12 episode baru diperbarui hari ini dengan subtitle Indo.</p>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="">Status Server</span>
+<span class="text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Optimal 4K</span>
+</div>
+</div>
+</aside>
+<!-- Right Main Catalog Content Area -->
+<div class="flex-1 min-w-0 w-full flex flex-col gap-space-md">
+<!-- Section Title & Active Counts Header -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-secondary-container shadow-[0_0_8px_#e10111]"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim">Eksplorasi Katalog</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-extrabold flex items-center gap-space-xs">
+                Katalog Lengkap
+                <span class="text-body-md font-body-md text-outline font-normal self-center">(1,489 Judul)</span>
+</h1>
+</div>
+<!-- View switcher -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg self-start sm:self-auto">
+<button aria-label="Tampilan Grid" class="p-1.5 rounded-md bg-surface-container text-on-surface transition-colors" id="view-grid" type="button">
+<span class="material-symbols-outlined text-lg">grid_view</span>
+</button>
+<button aria-label="Tampilan List" class="p-1.5 rounded-md text-outline hover:text-on-surface transition-colors" id="view-list" type="button">
+<span class="material-symbols-outlined text-lg">view_list</span>
+</button>
+</div>
+</div>
+<!-- Horizontal Filter & Sorting Controls -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low/60 p-space-sm rounded-xl">
+<!-- Filter Pills Horizontal Bar -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none">
+<button class="px-space-sm py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md shadow-[0_2px_10px_rgba(225,1,17,0.35)] flex-shrink-0" type="button">
+                Semua
+              </button>
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all flex-shrink-0" type="button">
+                Drama China
+              </button>
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all flex-shrink-0" type="button">
+                Drama Korea
+              </button>
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all flex-shrink-0" type="button">
+                Film
+              </button>
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all flex-shrink-0" type="button">
+                Anime
+              </button>
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all flex-shrink-0" type="button">
+                Variety
+              </button>
+</div>
+<!-- Dropdown Filter Controls -->
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<div class="relative inline-block">
+<button class="flex items-center gap-1.5 bg-surface-container px-space-sm py-1.5 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="text-outline">Urutan:</span>
+<span class="font-bold">Populer</span>
+<span class="material-symbols-outlined text-sm text-outline">arrow_drop_down</span>
+</button>
+</div>
+<div class="relative inline-block">
+<button class="flex items-center gap-1.5 bg-surface-container px-space-sm py-1.5 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="text-outline">Waktu:</span>
+<span class="font-bold">Terbaru</span>
+<span class="material-symbols-outlined text-sm text-outline">arrow_drop_down</span>
+</button>
+</div>
+<div class="relative inline-block">
+<button class="flex items-center gap-1.5 bg-surface-container px-space-sm py-1.5 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="text-outline">Skor:</span>
+<span class="font-bold">Rating 8.5+</span>
+<span class="material-symbols-outlined text-sm text-outline">arrow_drop_down</span>
+</button>
+</div>
+<div class="relative inline-block">
+<button class="flex items-center gap-1.5 bg-surface-container px-space-sm py-1.5 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="text-outline">Tahun:</span>
+<span class="font-bold">2023 - 2025</span>
+<span class="material-symbols-outlined text-sm text-outline">arrow_drop_down</span>
+</button>
+</div>
+<div class="ml-auto hidden sm:flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary-container">filter_alt</span>
+<span class="">Filter Aktif (4)</span>
+</div>
+</div>
+</div>
+<!-- Multi-column Grid of Streaming Posters (4-5 cols on desktop, responsive) -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-space-sm lg:gap-space-md" id="catalog-card-grid">
+<!-- Card 1: Hidden Love -->
+<article class="group relative flex flex-col bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_28px_rgba(0,0,0,0.8)] cursor-pointer hover:shadow-[0_4px_24px_rgba(225,1,17,0.45)]" data-path="detail_tayangan">
+<div class="relative aspect-[2/3] w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Hidden Love Chinese romantic drama poster, beautiful young Asian woman with elegant hair and thoughtful look, cinematic moody soft rim lighting with romantic dark shadows and gentle crimson red bokeh accent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7hPf4tqxkbWishzoA0VYGk5IPq70uUEHaFdOADZyGlDt-GMFNETGZ-MuJvY1lqDn3niWIArRr9-SQBRJ6-R2VNDqoMX9DLkVIOrGr65Clg07XBh6ksnFukv6PkmXHgw-oy0tJZsPhAFmvqU37UtEFiWP0T-KGCcw9Jrvu8XsytRLUTZ8q5LmwWsHWJBJoKuCnuT-hIkR8pFKFlr6LzuKu7S4BCsGfogjq97pAEAU2">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<!-- HD Badge -->
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                  HD
+                </div>
+<!-- Trending / New tag -->
+<div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-0.5 shadow-[0_2px_8px_rgba(225,1,17,0.4)]">
+<span class="material-symbols-outlined text-xs">local_fire_department</span>
+                  TOP 1
+                </div>
+<!-- Hover Play Quick Action -->
+<div class="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/80 backdrop-blur-xs p-space-sm"><div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-[0_4px_20px_rgba(225,1,17,0.6)] transform translate-y-2 group-hover:translate-y-0 transition-transform"><span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span></div><a href="#" data-path="detail_tayangan" class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-secondary-container hover:bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-[0_2px_10px_rgba(225,1,17,0.35)] hover:shadow-[0_4px_20px_rgba(225,1,17,0.6)] transition-all transform translate-y-2 group-hover:translate-y-0"><span class="material-symbols-outlined text-sm">info</span><span class="">Lihat Detail</span></a></div>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight truncate group-hover:text-primary-container transition-colors">Hidden Love</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="">Drama China</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="">24 eps</span>
+</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">9.2</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2023</span>
+</div>
+</div>
+</article>
+<!-- Card 2: The Glory -->
+<article class="group relative flex flex-col bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_28px_rgba(0,0,0,0.8)] cursor-pointer hover:shadow-[0_4px_24px_rgba(225,1,17,0.45)]" data-path="detail_tayangan">
+<div class="relative aspect-[2/3] w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="The Glory intense Korean psychological thriller drama poster, determined female protagonist in dark coat looking intensely at camera, dark rain-slicked city background with chilling atmosphere, deep obsidian shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOykSAF1Rzh5mQ3edTzhc-d4EO0fc41zqB1sw3YbhkoLxvhdKf5FJG3qKGl7EeCC2hbFBHIZ1tBDWzxjeAr9UM3XMz4DnBDGr6mmmHxkdDA8cnt6EBNCQfkuqqn5HWPQtncz3KVomNKeqVnGqLzoha5LbsinrDy1_NasJDhWyphwDbTlzuUqmfYj4LqHWcj9BCBAVpzbVlRDV30JZj9T9umHodCihY6h5N4B57yg8q">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                  HD
+                </div>
+<div class="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/80 backdrop-blur-xs p-space-sm"><div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-[0_4px_20px_rgba(225,1,17,0.6)] transform translate-y-2 group-hover:translate-y-0 transition-transform"><span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span></div><a href="#" data-path="detail_tayangan" class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-secondary-container hover:bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-[0_2px_10px_rgba(225,1,17,0.35)] hover:shadow-[0_4px_20px_rgba(225,1,17,0.6)] transition-all transform translate-y-2 group-hover:translate-y-0"><span class="material-symbols-outlined text-sm">info</span><span class="">Lihat Detail</span></a></div>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight truncate group-hover:text-primary-container transition-colors">The Glory</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="">Drama Korea</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="">16 eps</span>
+</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">9.1</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2022</span>
+</div>
+</div>
+</article>
+<!-- Card 3: One Piece -->
+<article class="group relative flex flex-col bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_28px_rgba(0,0,0,0.8)] cursor-pointer hover:shadow-[0_4px_24px_rgba(225,1,17,0.45)]" data-path="detail_tayangan">
+<div class="relative aspect-[2/3] w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="One Piece pirate anime key visual, spirited pirate captain with straw hat smiling confidently under stormy dramatic ocean skies with crimson lighting glows and cinematic anime brush strokes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Mk514-ptX-FHbCVUXgu1zHLJjYg4mPHHnsepY6RfWDQwrIFKYenK1Uv_S9e8J2Sd0hznCqF9DdzNhAKbAUzuOFVk2_O2rXvXOd0VfpqFlD_Fx61K13X-VWByUeAZiVTMEvoI-medtZCVMpC4HVjugQgiJqoc--rmh_QSOmgylCLuY4-DqKoG_xQhjigkMUaPNXTkapcpw60YGYDqqJ0NimDfb699FU2NSjmzShhF">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                  HD
+                </div>
+<div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+                  ONGOING
+                </div>
+<div class="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/80 backdrop-blur-xs p-space-sm"><div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-[0_4px_20px_rgba(225,1,17,0.6)] transform translate-y-2 group-hover:translate-y-0 transition-transform"><span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span></div><a href="#" data-path="detail_tayangan" class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-secondary-container hover:bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-[0_2px_10px_rgba(225,1,17,0.35)] hover:shadow-[0_4px_20px_rgba(225,1,17,0.6)] transition-all transform translate-y-2 group-hover:translate-y-0"><span class="material-symbols-outlined text-sm">info</span><span class="">Lihat Detail</span></a></div>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight truncate group-hover:text-primary-container transition-colors">One Piece</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="">Anime</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="">1120 eps</span>
+</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">9.5</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">1999+</span>
+</div>
+</div>
+</article>
+<!-- Card 4: John Wick 4 -->
+<article class="group relative flex flex-col bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_28px_rgba(0,0,0,0.8)] cursor-pointer hover:shadow-[0_4px_24px_rgba(225,1,17,0.45)]" data-path="detail_tayangan">
+<div class="relative aspect-[2/3] w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="John Wick 4 cinematic movie poster, lethal hitman in tailored black suit standing in front of glowing neon Parisian monuments, rainy reflection with intense crimson and amber neon flare" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEZEsdUSa-ofcSJo5OmNQBh84XoErtgfxH3hxkOeq-qVWmFcUZf9WgkQzwYQKDnZTKgk4xhIdjLGHtjPtofr06oTUi8qYFA2PxZLUO1UO0qIM2AhmcY_L5SFH1-b4Y-M8URq4kUuMmawmdoo8MgZ5f831xY4yQU3yJGwjmfqFc5KWEqt1jKlbsoAkJahVqzWYbSMCcKbQ_cGs2RdY0zqjRqxrgac-20XHOqEGSiWUS">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                  4K UHD
+                </div>
+<div class="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/80 backdrop-blur-xs p-space-sm"><div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-[0_4px_20px_rgba(225,1,17,0.6)] transform translate-y-2 group-hover:translate-y-0 transition-transform"><span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span></div><a href="#" data-path="detail_tayangan" class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-secondary-container hover:bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-[0_2px_10px_rgba(225,1,17,0.35)] hover:shadow-[0_4px_20px_rgba(225,1,17,0.6)] transition-all transform translate-y-2 group-hover:translate-y-0"><span class="material-symbols-outlined text-sm">info</span><span class="">Lihat Detail</span></a></div>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight truncate group-hover:text-primary-container transition-colors">John Wick 4</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="">Film</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="">169 mnt</span>
+</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">8.7</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2023</span>
+</div>
+</div>
+</article>
+<!-- Card 5: Love Like the Galaxy -->
+<article class="group relative flex flex-col bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_28px_rgba(0,0,0,0.8)] cursor-pointer hover:shadow-[0_4px_24px_rgba(225,1,17,0.45)]" data-path="detail_tayangan">
+<div class="relative aspect-[2/3] w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Love Like the Galaxy historical Chinese drama key art, valiant general and brave noblewoman standing back to back against starry night sky with palace lanterns and crimson red war flags" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnQopWQvQCTE5ZQscdBQTsJlltfvpMmq8SpVPaN48ao-0QwI7kipju5VknoiVjBGhSk6pWYMF6xa4JWVjccd4NQcN9L3V5_F5B3SdcTC-qoZMAjLGISowZXLJsCvDgT-UZxSoKw0tM7OleHWsJO72A9nY1plNey3jqXOAs20Qv4oyicQYR7qQytZcXF7zFcz8mii2VDzMIrmOorr96b64hudzBaI8vrc0848jyPylZ">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                  HD
+                </div>
+<div class="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/80 backdrop-blur-xs p-space-sm"><div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-[0_4px_20px_rgba(225,1,17,0.6)] transform translate-y-2 group-hover:translate-y-0 transition-transform"><span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span></div><a href="#" data-path="detail_tayangan" class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-secondary-container hover:bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-[0_2px_10px_rgba(225,1,17,0.35)] hover:shadow-[0_4px_20px_rgba(225,1,17,0.6)] transition-all transform translate-y-2 group-hover:translate-y-0"><span class="material-symbols-outlined text-sm">info</span><span class="">Lihat Detail</span></a></div>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight truncate group-hover:text-primary-container transition-colors">Love Like the Galaxy</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="">Drama China</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="">27 eps</span>
+</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">9.3</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2022</span>
+</div>
+</div>
+</article>
+<!-- Card 6: Jujutsu Kaisen -->
+<article class="group relative flex flex-col bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_28px_rgba(0,0,0,0.8)] cursor-pointer hover:shadow-[0_4px_24px_rgba(225,1,17,0.45)]" data-path="detail_tayangan">
+<div class="relative aspect-[2/3] w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Jujutsu Kaisen dark fantasy anime series poster, sorcerers fighting with cursed energy flares in nighttime Tokyo Shibuya streets, electric blue and blood-red glowing mystical power effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBejZrb9KGVA5gpEL4WcvHZBxqHZ76cEPcBNjKcit2Vo23BMEA2qYz1k0-BRTP-mSnaA-f76taPOge49DAl2C0Rkl5zIoP_0nZJqjQAVTU03oaFK44v82axsDW5TP7bdQyCV7kpvmqdVoPLBleMJHAfvN1hzt_CNkzK93hIPhgFM0eofRP716Fwvl3Eiyl2ON0ncu5TfLRTXHumAqsISTdIiKBbHUVDuWnTWOvbcxiU">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                  HD
+                </div>
+<div class="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/80 backdrop-blur-xs p-space-sm"><div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-[0_4px_20px_rgba(225,1,17,0.6)] transform translate-y-2 group-hover:translate-y-0 transition-transform"><span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span></div><a href="#" data-path="detail_tayangan" class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-secondary-container hover:bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-[0_2px_10px_rgba(225,1,17,0.35)] hover:shadow-[0_4px_20px_rgba(225,1,17,0.6)] transition-all transform translate-y-2 group-hover:translate-y-0"><span class="material-symbols-outlined text-sm">info</span><span class="">Lihat Detail</span></a></div>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight truncate group-hover:text-primary-container transition-colors">Jujutsu Kaisen</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="">Anime</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="">24 eps</span>
+</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">9.4</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2023</span>
+</div>
+</div>
+</article>
+<!-- Card 7: Demon Slayer -->
+<article class="group relative flex flex-col bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_28px_rgba(0,0,0,0.8)] cursor-pointer hover:shadow-[0_4px_24px_rgba(225,1,17,0.45)]" data-path="detail_tayangan">
+<div class="relative aspect-[2/3] w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Demon Slayer anime poster, swordsman with sun breathing crimson flame blade striking against demon darkness, vivid vibrant fiery embers flying across dark night backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwh8TMxd4Yod0Ca8UFkOM1XauvUb13XeUW2FqWzHRTryuhD1X1uNz3kClP85_AiCcENw4BDWsmySf8NKPwEJ17FFapKXiuW8VIvbqsiz-BDKhmNuqZq6Fg8tUmsNQDnp4yK3fiepF-93qoWWKdtNAuMhGpLNE_kwKEfzzaXfrv05H_5JU8utS-5B43t3fqpAfnomO_XSswvmyrfHbFTBf3OHT3yWL3973ZY1ls047I">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                  HD
+                </div>
+<div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">grade</span>
+                  POPULER
+                </div>
+<div class="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/80 backdrop-blur-xs p-space-sm"><div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-[0_4px_20px_rgba(225,1,17,0.6)] transform translate-y-2 group-hover:translate-y-0 transition-transform"><span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span></div><a href="#" data-path="detail_tayangan" class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-secondary-container hover:bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-[0_2px_10px_rgba(225,1,17,0.35)] hover:shadow-[0_4px_20px_rgba(225,1,17,0.6)] transition-all transform translate-y-2 group-hover:translate-y-0"><span class="material-symbols-outlined text-sm">info</span><span class="">Lihat Detail</span></a></div>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight truncate group-hover:text-primary-container transition-colors">Demon Slayer</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="">Anime</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="">55 eps</span>
+</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">9.6</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2024</span>
+</div>
+</div>
+</article>
+<!-- Card 8: Business Proposal -->
+<article class="group relative flex flex-col bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_28px_rgba(0,0,0,0.8)] cursor-pointer hover:shadow-[0_4px_24px_rgba(225,1,17,0.45)]" data-path="detail_tayangan">
+<div class="relative aspect-[2/3] w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Business Proposal Korean romantic comedy series poster, attractive modern couple in stylish corporate attire sharing a playful romantic gaze, warm studio backlight with gentle cinematic glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRenVVhOPtmVO9dSJuH3i3hioh--eFsPPv8TruiKPkB0TpFWxUP-d9wpb3_Tp4wpQQGG8GEuYk6itADcEsZKnbBLCypayo6ZhYPeySJVGti2_0cvBW40NuChiM2KbkbKLXdrFe-k1vEFu9iwHquIo2F3CEVh0Jbo3wBTsDy-WscF_vb52mZXMCHaD1DoFImbW1j3gLT9jYC8FImjeUmE2afCH0h6sRYHMUywMFFaVA">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                  HD
+                </div>
+<div class="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/80 backdrop-blur-xs p-space-sm"><div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-[0_4px_20px_rgba(225,1,17,0.6)] transform translate-y-2 group-hover:translate-y-0 transition-transform"><span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span></div><a href="#" data-path="detail_tayangan" class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-secondary-container hover:bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-[0_2px_10px_rgba(225,1,17,0.35)] hover:shadow-[0_4px_20px_rgba(225,1,17,0.6)] transition-all transform translate-y-2 group-hover:translate-y-0"><span class="material-symbols-outlined text-sm">info</span><span class="">Lihat Detail</span></a></div>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight truncate group-hover:text-primary-container transition-colors">Business Proposal</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="">Drama Korea</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="">12 eps</span>
+</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">8.5</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2022</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Bottom Pagination / Load More Section -->
+<div class="mt-space-lg mb-space-md flex flex-col items-center justify-center gap-space-sm">
+<button class="group relative px-space-xl py-space-sm rounded-full bg-surface-container hover:bg-secondary-container text-on-surface hover:text-on-secondary-container font-label-lg text-label-lg font-bold transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_4px_24px_rgba(225,1,17,0.45)] flex items-center gap-space-xs" id="load-more-btn" type="button">
+<span class="">Muat Lebih Banyak</span>
+<span class="material-symbols-outlined text-lg group-hover:translate-y-0.5 transition-transform">expand_more</span>
+</button>
+<p class="font-body-sm text-body-sm text-outline">Menampilkan 8 dari 1,489 judul tersedia</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    const gridBtn = document.getElementById('view-grid');
+    const listBtn = document.getElementById('view-list');
+    const gridContainer = document.getElementById('catalog-card-grid');
+
+    if (gridBtn && listBtn && gridContainer) {
+      gridBtn.addEventListener('click', function() {
+        gridBtn.className = 'p-1.5 rounded-md bg-surface-container text-on-surface transition-colors';
+        listBtn.className = 'p-1.5 rounded-md text-outline hover:text-on-surface transition-colors';
+        gridContainer.className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-space-sm lg:gap-space-md';
+      });
+
+      listBtn.addEventListener('click', function() {
+        listBtn.className = 'p-1.5 rounded-md bg-surface-container text-on-surface transition-colors';
+        gridBtn.className = 'p-1.5 rounded-md text-outline hover:text-on-surface transition-colors';
+        gridContainer.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-space-sm';
+      });
+    }
+
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', function() {
+        const textSpan = loadMoreBtn.querySelector('span:first-child');
+        if (textSpan) {
+          textSpan.textContent = 'Memuat Konten...';
+          setTimeout(() => {
+            textSpan.textContent = 'Semua Konten Ditampilkan';
+            loadMoreBtn.classList.add('opacity-70', 'pointer-events-none');
+          }, 800);
+        }
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-low mt-space-xl"><div class="w-full max-w-[1440px] mx-auto px-gutter-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-space-lg mb-space-xl"><div class="lg:col-span-2 space-y-space-sm"><div class="flex items-center gap-space-sm"><img alt="Ranzz Stream" class="h-8 w-auto object-contain rounded-md" src="https://lh3.googleusercontent.com/aida/AEtjO1V4CgBYYla3vD3SnhBmnBw0NyGY87Vvc8dxGPabaKdLAh9eUXyd-OEdp7fnYV4O7ygXbVWIBG_ydcu0wiTjq1aE1tA6xL-sAy6cQ1eqdQMyoUuEEsp2TPuYAdSApkfMtwDOZ4CzmN0xD18dxdLQBPwG0Nx5jxsHZi9fBkLAzkOIVYWovc-ixLPLoDu2x-Kcon0_U3BFwc1OeKpwCfDE4iPBeph2m6Z8VWgQ0DBLgxRF"><span class="font-headline-sm text-headline-sm text-on-surface uppercase">Ranzz<span class="text-primary-container">Stream</span></span></div><p class="text-on-surface-variant text-body-sm font-body-sm max-w-sm">Platform streaming film, serial drama Asia premium, dan anime terlengkap dengan kualitas visual sinematik terbaik.</p><div class="flex items-center gap-space-sm pt-space-xs"><a aria-label="Explore" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-lg">public</span></a><a aria-label="Community" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-lg">forum</span></a><a aria-label="Broadcast" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-lg">podcasts</span></a></div></div><div class="space-y-space-xs"><p class="text-on-surface font-label-lg text-label-lg uppercase tracking-wider">Kategori</p><ul class="space-y-space-xs text-body-sm font-body-sm"><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="drama" href="#">Drama Asia</a></li><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="film" href="#">Film Layar Lebar</a></li><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="anime" href="#">Anime Series</a></li><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="katalog" href="#">Original Ranzz</a></li></ul></div><div class="space-y-space-xs"><p class="text-on-surface font-label-lg text-label-lg uppercase tracking-wider">Bantuan</p><ul class="space-y-space-xs text-body-sm font-body-sm"><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Pusat Bantuan</a></li><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Syarat &amp; Ketentuan</a></li><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Kebijakan Privasi</a></li><li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Status Layanan</a></li></ul></div><div class="space-y-space-xs"><p class="text-on-surface font-label-lg text-label-lg uppercase tracking-wider">Unduh Aplikasi</p><p class="text-on-surface-variant text-body-sm font-body-sm">Tersedia di TV pintar, tablet, dan smartphone Android &amp; iOS.</p><div class="flex flex-col gap-space-xs pt-space-xs"><div class="bg-surface-container px-space-sm py-space-xs rounded-lg flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-lg">tv</span><span class="font-label-md text-label-md text-on-surface">Smart TV App</span></div><div class="bg-surface-container px-space-sm py-space-xs rounded-lg flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-lg">smartphone</span><span class="font-label-md text-label-md text-on-surface">Mobile App</span></div></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm text-body-sm font-body-sm text-on-surface-variant/80"><p class="">© 2025 Ranzz Stream. Seluruh hak cipta dilindungi undang-undang.</p><div class="flex gap-space-md"><a class="hover:text-on-surface transition-colors" href="#">Privasi</a><a class="hover:text-on-surface transition-colors" href="#">Ketentuan</a><a class="hover:text-on-surface transition-colors" href="#">Preferensi Cookie</a></div></div></div></footer>
+
+
+
+
+
+
+
+</body></html>

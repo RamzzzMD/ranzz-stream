@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#ff2a3a" stop-opacity="0.22" />
+      <stop offset="55%" stop-color="#1b1b1e" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0a0a0d" stop-opacity="1" />
+    </radialGradient>
+
+    <!-- Metallic Silver Gradient for Monogram -->
+    <linearGradient id="silverChrome" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="28%" stop-color="#f1f5f9" />
+      <stop offset="55%" stop-color="#cbd5e1" />
+      <stop offset="85%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+
+    <!-- Crimson Brand Accent Gradient -->
+    <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2a3a" />
+      <stop offset="100%" stop-color="#ff5263" />
+    </linearGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="crimsonFilter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="600" rx="32" fill="#09090b" />
+  <rect width="800" height="600" rx="32" fill="url(#bgGlow)" />
+
+  <!-- Subtle Ambient Rings -->
+  <circle cx="400" cy="225" r="160" stroke="#ff2a3a" stroke-opacity="0.08" stroke-width="1.5" stroke-dasharray="6 8" fill="none" />
+  <circle cx="400" cy="225" r="210" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1" fill="none" />
+
+  <!-- Main Monogram Group -->
+  <g transform="translate(0, -10)">
+    <!-- Lower Left Orbital Ring Swoop -->
+    <path d="M 275 272 C 260 286, 260 305, 280 314 C 306 325, 350 318, 385 296 C 378 298, 362 302, 345 302 C 310 302, 282 292, 285 280 C 286 276, 290 272, 298 268 Z"
+          fill="url(#silverChrome)" opacity="0.85" />
+    
+    <!-- Outer Glow behind 'R' -->
+    <path d="M 330 115 L 415 115 C 465 115, 492 135, 492 172 C 492 205, 468 228, 432 236 L 478 308 L 442 308 L 402 245 L 360 245 L 342 308 L 305 308 Z"
+          fill="#ff2a3a" opacity="0.18" filter="url(#crimsonFilter)" />
+
+    <!-- Stylized 'R' Emblem with Sharp Edges & Dynamic Slash -->
+    <path d="M 335 120 L 420 120 C 465 120, 488 138, 488 172 C 488 202, 466 224, 430 232 C 452 242, 465 258, 478 305 L 438 305 C 426 264, 412 242, 382 242 L 358 242 L 340 305 L 304 305 L 342 168 L 322 168 L 326 150 L 346 150 Z
+             M 364 218 L 406 218 C 435 218, 452 204, 452 175 C 452 148, 436 138, 408 138 L 382 138 Z"
+          fill="url(#silverChrome)" />
+
+    <!-- Sharp Blade Accents on the R Stem -->
+    <!-- Top left sharp horn -->
+    <polygon points="334,120 310,126 330,136" fill="#ffffff" />
+    <!-- Bottom right dynamic spur -->
+    <polygon points="478,305 505,302 470,292" fill="url(#silverChrome)" />
+
+    <!-- Star Sparkle at Top-Right of R -->
+    <g transform="translate(488, 142) scale(1.15)" filter="url(#starGlow)">
+      <!-- 4-point Diamond Star -->
+      <path d="M 0 -24 Q 0 0 -24 0 Q 0 0 0 24 Q 0 0 24 0 Q 0 0 0 -24 Z" fill="#ffffff" />
+      <circle cx="0" cy="0" r="3.5" fill="#ff5263" />
+    </g>
+
+    <!-- Secondary micro-sparkle -->
+    <g transform="translate(306, 240) scale(0.55)" opacity="0.8">
+      <path d="M 0 -18 Q 0 0 -18 0 Q 0 0 0 18 Q 0 0 18 0 Q 0 0 0 -18 Z" fill="#ffffff" />
+    </g>
+  </g>
+
+  <!-- Typography Lockup -->
+  <!-- Brand Wordmark -->
+  <text x="400" y="445" text-anchor="middle" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="46" letter-spacing="6">
+    <tspan fill="#ffffff">RANZZ</tspan>
+    <tspan fill="url(#crimsonGrad)">STREAM</tspan>
+  </text>
+
+  <!-- Tagline / Category Subtitle -->
+  <text x="400" y="482" text-anchor="middle" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="12" letter-spacing="9" fill="#94a3b8">
+    DRAMA <tspan fill="#ff2a3a">•</tspan> FILM <tspan fill="#ff2a3a">•</tspan> ANIME
+  </text>
+
+  <!-- Underline Accent Bar -->
+  <rect x="330" y="508" width="140" height="3" rx="1.5" fill="url(#crimsonGrad)" opacity="0.8" />
+  <circle cx="400" cy="509.5" r="3.5" fill="#ffffff" />
+</svg>
