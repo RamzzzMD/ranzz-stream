@@ -3,6 +3,7 @@ import { getStream, getMovieDetail, getSeriesDetail, getSeasonEpisodes } from '@
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+export const maxDuration = 60; // Izinkan hingga 60 detik di Vercel untuk gate countdown & stream redemption
 
 interface CacheEntry {
   data: any;
